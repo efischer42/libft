@@ -6,7 +6,7 @@
 #    By: efischer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:59:56 by efischer          #+#    #+#              #
-#    Updated: 2019/05/14 15:11:05 by efischer         ###   ########.fr        #
+#    Updated: 2019/05/14 16:09:34 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -208,4 +208,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean
+.PHONY: all clean fclean re
