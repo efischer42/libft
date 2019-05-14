@@ -6,7 +6,7 @@
 #    By: efischer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:59:56 by efischer          #+#    #+#              #
-#    Updated: 2019/05/14 14:47:03 by efischer         ###   ########.fr        #
+#    Updated: 2019/05/14 15:00:48 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -179,8 +179,14 @@ SRCS += ft_convert_to_unicode.c
 
 OBJS = $(patsubst %.c, $(PATHO)%.o, $(SRCS))
 
-vpath %.c srcs/libft/
 vpath %.c srcs/ft_printf/
+vpath %.c srcs/is_str/
+vpath %.c srcs/analyse_str/
+vpath %.c srcs/process_str/
+vpath %.c srcs/nbr/
+vpath %.c srcs/print/
+vpath %.c srcs/memory/
+vpath %.c srcs/list/
 vpath %.h $(PATHI)
 
 all: $(NAME)
