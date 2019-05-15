@@ -6,7 +6,7 @@
 #    By: efischer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:59:56 by efischer          #+#    #+#              #
-#    Updated: 2019/05/14 16:09:34 by efischer         ###   ########.fr        #
+#    Updated: 2019/05/15 15:37:50 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ PATHI += $(INCLUDES)
 
 #====================================COMPILE====================================
 
-CC = clang
+CC = gcc
 CFLAGS += -Wall
 CFLAGS += -Wextra
 CFLAGS += -Werror
@@ -153,6 +153,7 @@ SRCS += ft_memset.c
 #///////////////////////////////////FT_PRINTF///////////////////////////////////
 
 SRCS += ft_printf.c
+SRCS += ft_asprintf.c
 SRCS += ft_manage_conv.c
 SRCS += ft_util.c
 SRCS += ft_flag.c
@@ -163,16 +164,11 @@ SRCS += ft_long_diouxx.c
 SRCS += ft_manage_p.c
 SRCS += ft_width_precision.c
 SRCS += ft_process_flag.c
-SRCS += ft_printfloat.c
 SRCS += ft_putunicode.c
 SRCS += ft_check_unicode.c
 SRCS += ft_convert_to_unicode.c
 SRCS += ft_manage_unicode.c
 SRCS += ft_round.c
-SRCS += ft_printfloat.c
-SRCS += ft_check_unicode.c
-SRCS += ft_putunicode.c
-SRCS += ft_convert_to_unicode.c
 
 #=====================================OBJS======================================
 

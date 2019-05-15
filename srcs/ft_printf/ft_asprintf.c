@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_asprintf.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 11:28:28 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/15 14:31:39 by efischer         ###   ########.fr       */
+/*   Created: 2019/05/15 15:35:14 by efischer          #+#    #+#             */
+/*   Updated: 2019/05/15 15:50:24 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,16 +87,16 @@ static void		ft_get_out(va_list *arg, t_out *out, char *str)
 	}
 }
 
-int				ft_printf(const char *format, ...)
+char			*ft_asprintf(const char *format, ...)
 {
 	va_list	arg;
 	t_out	*out;
 	int		len;
 
 	if (!format)
-		return (0);
+		return (NULL);
 	if (!(out = (t_out*)malloc(sizeof(t_out))))
-		return (-1);
+		return (NULL);
 	out->len = 0;
 	len = ft_strlen(format);
 	if (ft_strchr(format, '%'))
@@ -106,11 +106,11 @@ int				ft_printf(const char *format, ...)
 		va_end(arg);
 		len = out->len;
 		if (len != -1)
-			write(1, out->str, out->len);
+			format = ft_strndup(out->str, len);
 		free(out->str);
 	}
 	else
-		write(1, format, ft_strlen(format));
+		format = ft_strdup(format);
 	free(out);
-	return (len);
+	return ((char*)format);
 }

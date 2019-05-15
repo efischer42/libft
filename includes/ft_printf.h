@@ -6,7 +6,7 @@
 /*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 11:27:09 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/13 18:02:48 by efischer         ###   ########.fr       */
+/*   Updated: 2019/05/15 15:38:25 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ typedef struct	s_flag
 }				t_flag;
 
 int				ft_printf(const char *format, ...);
+char			*ft_asprintf(const char *format, ...);
 t_list			*ft_lstnew_str(char const *content, size_t content_size);
 char			*ft_process_flag(char **s, va_list *arg, t_flag *flag);
 void			ft_init_flag(t_flag *flag);
