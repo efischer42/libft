@@ -22,5 +22,6 @@ void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_print_matrix(int **matrix, unsigned int x, unsigned int y);
+void	ft_print_tab(char **tab);
 
 #endif

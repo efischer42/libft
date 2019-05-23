@@ -124,6 +124,7 @@ SRCS += ft_putstr_fd.c
 SRCS += ft_putnbr.c
 SRCS += ft_putnbr_fd.c
 SRCS += ft_print_matrix.c
+SRCS += ft_print_tab.c
 
 #/////////////////////////////////////LIST//////////////////////////////////////
 
