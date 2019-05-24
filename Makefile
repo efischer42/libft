@@ -6,7 +6,7 @@
 #    By: efischer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:59:56 by efischer          #+#    #+#              #
-#    Updated: 2019/05/18 17:56:32 by efischer         ###   ########.fr        #
+#    Updated: 2019/05/24 13:21:31 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,14 @@ INCLUDES += includes/
 HEAD += libft.h
 HEAD += struct.h
 HEAD += ft_printf.h
+HEAD += analyse_str.h
+HEAD += free.h
+HEAD += is_str.h
+HEAD += list.h
+HEAD += memory.h
+HEAD += nbr.h
+HEAD += print.h
+HEAD += process_str.h
 IFLAGS = -I
 
 #=====================================PATH======================================
