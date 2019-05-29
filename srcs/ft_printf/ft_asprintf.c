@@ -6,7 +6,7 @@
 /*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/15 15:35:14 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/15 15:50:24 by efischer         ###   ########.fr       */
+/*   Updated: 2019/05/29 13:10:04 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,22 +91,19 @@ char			*ft_asprintf(const char *format, ...)
 {
 	va_list	arg;
 	t_out	*out;
-	int		len;
 
 	if (!format)
 		return (NULL);
 	if (!(out = (t_out*)malloc(sizeof(t_out))))
 		return (NULL);
 	out->len = 0;
-	len = ft_strlen(format);
 	if (ft_strchr(format, '%'))
 	{
 		va_start(arg, format);
 		ft_get_out(&arg, out, (char*)format);
 		va_end(arg);
-		len = out->len;
-		if (len != -1)
-			format = ft_strndup(out->str, len);
+		if (out->len != -1)
+			format = ft_strndup(out->str, out->len);
 		free(out->str);
 	}
 	else
