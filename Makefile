@@ -6,13 +6,11 @@
 #    By: efischer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 17:59:56 by efischer          #+#    #+#              #
-#    Updated: 2019/05/31 17:56:14 by efischer         ###   ########.fr        #
+#    Updated: 2019/05/31 19:03:15 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
-#sluhgi
 
 #=====================================HEAD======================================
 
@@ -28,12 +26,11 @@ HEAD += memory.h
 HEAD += nbr.h
 HEAD += print.h
 HEAD += process_str.h
+HEAD += sort.h
 IFLAGS = -I
 
 #=====================================PATH======================================
 
-#PATHS += srcs/libft
-#PATHS += srcs/ft_printf/
 PATHO += objs/
 PATHI += $(INCLUDES)
 
@@ -166,6 +163,11 @@ SRCS += ft_memset.c
 SRCS += ft_free_tab.c
 SRCS += ft_free_content.c
 
+#/////////////////////////////////////SORT//////////////////////////////////////
+
+SRCS += ft_selection_sort.c
+SRCS += ft_merge_sort.c
+
 #///////////////////////////////////FT_PRINTF///////////////////////////////////
 
 SRCS += ft_printf.c
@@ -199,6 +201,7 @@ vpath %.c srcs/print/
 vpath %.c srcs/memory/
 vpath %.c srcs/list/
 vpath %.c srcs/free/
+vpath %.c srcs/sort/
 vpath %.h $(PATHI)
 
 all: $(NAME)
