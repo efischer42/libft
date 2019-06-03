@@ -14,6 +14,7 @@
 # define LIST_H
 
 void		ft_lstadd(t_list **alst, t_list *new);
+void		ft_lstaddend(t_list **alst, t_list *new);
 void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void		ft_lstfree(t_list *list);
