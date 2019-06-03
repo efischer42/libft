@@ -24,9 +24,9 @@ HEAD += is_str.h
 HEAD += list.h
 HEAD += memory.h
 HEAD += nbr.h
+HEAD += sort.h
 HEAD += print.h
 HEAD += process_str.h
-HEAD += sort.h
 IFLAGS = -I
 
 #=====================================PATH======================================

@@ -23,5 +23,6 @@ void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_print_matrix(int **matrix, unsigned int x, unsigned int y);
 void	ft_print_tab(char **tab);
+//void	ft_selection_sort(char **tab);
 
 #endif
