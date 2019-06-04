@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_merge_sort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/31 19:01:49 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/31 19:01:59 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/04 10:21:52 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/04 10:21:53 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "sort.h"
 
 static void	ft_split_lst(t_list **lst)
 {

@@ -6,7 +6,7 @@
 /*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 15:52:30 by efischer          #+#    #+#             */
-/*   Updated: 2018/11/13 14:59:04 by efischer         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:24:26 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
+	if (s == NULL)
+		return (0);
 	while (s[len])
 		len++;
 	return (len);

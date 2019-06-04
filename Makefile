@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: efischer <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: efischer <efischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/11/07 17:59:56 by efischer          #+#    #+#              #
-#    Updated: 2019/05/31 19:03:15 by efischer         ###   ########.fr        #
+#    Created: 2019/06/04 10:22:22 by efischer          #+#    #+#              #
+#    Updated: 2019/06/04 10:29:37 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -207,10 +207,10 @@ vpath %.h $(PATHI)
 
 all: $(NAME)
 
-$(NAME): $(PATHO) $(OBJS) $(HEAD)
+$(NAME): $(PATHO) $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
-$(OBJS): $(PATHO)%.o: %.c
+$(OBJS): $(PATHO)%.o: %.c $(HEAD) Makefile
 	$(COMPILE) $(CFLAGS) $< $(IFLAGS) $(INCLUDES) -o $@
 
 $(PATHO):

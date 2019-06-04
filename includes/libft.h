@@ -6,7 +6,7 @@
 /*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:34:36 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/18 17:55:25 by efischer         ###   ########.fr       */
+/*   Updated: 2019/06/04 10:51:59 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,13 @@
 # include "analyse_str.h"
 # include "process_str.h"
 # include "free.h"
-# define BUFF_SIZE 32
+# include "sort.h"
+# define BUFF_SIZE	32
+# define TRUE		1
+# define FALSE		0
+# define SUCCESS	0
+# define FAILURE	-1
 # define FILEL ((t_file *)(list->content))
 # define T_FILEL ((t_file *)(tmp->content))
-# define TRUE 1
-# define FALSE 0
 
 #endif

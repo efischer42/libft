@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_selection_sort.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/31 18:17:15 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/31 18:30:02 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/04 10:22:00 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/04 10:22:01 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "sort.h"
 
 void	ft_selection_sort(char **tab)
 {
