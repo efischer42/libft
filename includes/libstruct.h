@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   struct.h                                           :+:      :+:    :+:   */
+/*   libstruct.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 15:16:07 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/06 15:32:53 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 17:52:54 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 17:53:05 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCT_H
-# define STRUCT_H
+#ifndef LIBSTRUCT_H
+# define LIBSTRUCT_H
 
 # include "libft.h"
 

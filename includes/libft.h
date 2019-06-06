@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:32:07 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/06 15:32:14 by efischer         ###   ########.fr       */
+/*   Updated: 2019/06/06 17:53:39 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include "struct.h"
+# include "libstruct.h"
 # include "ft_printf.h"
 # include "list.h"
 # include "memory.h"

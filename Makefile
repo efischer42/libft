@@ -6,7 +6,7 @@
 #    By: efischer <efischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 10:22:22 by efischer          #+#    #+#              #
-#    Updated: 2019/06/06 13:45:42 by efischer         ###   ########.fr        #
+#    Updated: 2019/06/06 17:53:54 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = libft.a
 
 INCLUDES += includes/
 HEAD += libft.h
-HEAD += struct.h
+HEAD += libstruct.h
 HEAD += ft_printf.h
 HEAD += analyse_str.h
 HEAD += free.h
