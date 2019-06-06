@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   analyse_str.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/14 15:23:55 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/14 15:26:33 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:14:09 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:31:41 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ANALYSE_STR_H
 # define ANALYSE_STR_H
+
+# include "libft.h"
 
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);

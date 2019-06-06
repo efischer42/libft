@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 16:55:39 by efischer          #+#    #+#             */
-/*   Updated: 2018/11/09 17:00:15 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:17:43 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:34:48 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "analyse_str.h"
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {

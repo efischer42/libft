@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcasecmp.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 14:37:48 by efischer          #+#    #+#             */
-/*   Updated: 2018/11/14 15:27:31 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:16:47 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:33:25 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "analyse_str.h"
 
 int		ft_strcasecmp(const char *s1, const char *s2)
 {

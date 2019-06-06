@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcasestr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 15:29:53 by efischer          #+#    #+#             */
-/*   Updated: 2019/03/15 16:16:20 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:16:53 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:33:55 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "analyse_str.h"
 
 char	*ft_strcasestr(const char *haystack, const char *needle)
 {

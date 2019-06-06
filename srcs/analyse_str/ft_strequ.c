@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 16:43:33 by efischer          #+#    #+#             */
-/*   Updated: 2018/11/09 16:58:00 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:17:15 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:34:14 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "analyse_str.h"
 
 int		ft_strequ(char const *s1, char const *s2)
 {

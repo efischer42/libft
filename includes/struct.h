@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   struct.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/13 16:57:47 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/29 10:45:47 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:16:07 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:32:53 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUCT_H
 # define STRUCT_H
+
+# include "libft.h"
 
 typedef struct		s_list
 {

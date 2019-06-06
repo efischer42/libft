@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   is_str.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/14 15:21:04 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/14 15:22:34 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:14:39 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:32:04 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef IS_STR_H
 # define IS_STR_H
+
+# include "libft.h"
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);

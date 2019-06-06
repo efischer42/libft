@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 17:00:27 by efischer          #+#    #+#             */
-/*   Updated: 2018/11/13 15:08:21 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:17:47 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:34:55 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "analyse_str.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

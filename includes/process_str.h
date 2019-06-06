@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   process_str.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/14 15:29:42 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/14 15:35:11 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:15:57 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:32:39 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PROCESS_STR_H
 # define PROCESS_STR_H
+
+# include "libft.h"
 
 char	*ft_join_free(char *s1, char *s2, int op);
 char	*ft_strcapitalize(char *str);

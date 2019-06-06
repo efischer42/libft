@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/11 15:52:45 by efischer          #+#    #+#             */
-/*   Updated: 2019/01/11 17:14:13 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:18:08 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:35:51 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "free.h"
 
 void	ft_free_tab(char **tmp)
 {

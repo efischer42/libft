@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   memory.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/14 15:11:54 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/14 15:14:17 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:15:33 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:32:27 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MEMORY_H
 # define MEMORY_H
+
+# include "libft.h"
 
 void	ft_bzero(void	*s, size_t	n);
 void	*ft_memchr(const void *s, int c, size_t n);

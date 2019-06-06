@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   print.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/14 15:18:30 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/14 15:19:53 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:15:51 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:32:35 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINT_H
 # define PRINT_H
+
+# include "libft.h"
 
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);

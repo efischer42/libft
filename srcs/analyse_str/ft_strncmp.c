@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 16:05:33 by efischer          #+#    #+#             */
-/*   Updated: 2018/11/13 15:05:14 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:17:31 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:34:31 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "analyse_str.h"
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {

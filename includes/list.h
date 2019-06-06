@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   list.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: efischer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/14 15:04:44 by efischer          #+#    #+#             */
-/*   Updated: 2019/05/14 15:10:12 by efischer         ###   ########.fr       */
+/*   Created: 2019/06/06 15:15:24 by efischer          #+#    #+#             */
+/*   Updated: 2019/06/06 15:32:22 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIST_H
 # define LIST_H
+
+# include "libft.h"
 
 void		ft_lstadd(t_list **alst, t_list *new);
 void		ft_lstaddend(t_list **alst, t_list *new);
