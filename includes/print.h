@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:15:51 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/06 15:32:35 by efischer         ###   ########.fr       */
+/*   Updated: 2019/06/08 14:36:15 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_print_matrix(int **matrix, unsigned int x, unsigned int y);
 void	ft_print_tab(char **tab);
-//void	ft_selection_sort(char **tab);
 
 #endif
