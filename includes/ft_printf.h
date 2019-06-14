@@ -15,7 +15,6 @@
 
 # include <stdarg.h>
 # include "libft.h"
-# define BUFF_SIZE 32
 # define FILEL ((t_file *)(list->content))
 # define T_FILEL ((t_file *)(tmp->content))
 # define PM1 "5"

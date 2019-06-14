@@ -70,9 +70,7 @@ static int		ft_read(t_file *file, char **line)
 		if ((tmp_rest = ft_strchr(buf, '\n')))
 		{
 			tmp = ft_strsub(buf, 0, tmp_rest - buf);
-			*line = ft_strjoin(file->cur, tmp);
-			ft_strdel(&file->cur);
-			ft_strdel(&tmp);
+			*line = ft_join_free(file->cur, tmp, 3);
 			file->rest = ft_strdup(tmp_rest + 1);
 			return (1);
 		}
