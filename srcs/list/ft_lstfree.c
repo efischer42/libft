@@ -6,17 +6,17 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:21:44 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/06 15:21:46 by efischer         ###   ########.fr       */
+/*   Updated: 2019/06/18 14:40:42 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstfree(t_list *list)
+void	ft_lstfree(t_list *lst, void (*f)(void*))
 {
-	if (!list)
+	if (lst == NULL)
 		return ;
-	ft_strdel((char**)&list->content);
-	ft_lstfree(list->next);
-	free(list);
+	f(lst->content);
+	ft_lstfree(lst->next, f);
+	free(lst);
 }
