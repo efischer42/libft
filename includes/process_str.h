@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:15:57 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/06 15:32:39 by efischer         ###   ########.fr       */
+/*   Updated: 2019/06/18 14:50:41 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char	*ft_strtrim(char const *s);
 char	*ft_strupcase(char *str);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int		get_next_line_fd(const int fd, char **line);
 int		get_next_line(const int fd, char **line);
 
 #endif
