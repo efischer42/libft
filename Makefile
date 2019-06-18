@@ -6,7 +6,7 @@
 #    By: efischer <efischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 10:22:22 by efischer          #+#    #+#              #
-#    Updated: 2019/06/08 14:03:26 by efischer         ###   ########.fr        #
+#    Updated: 2019/06/18 12:48:25 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -147,6 +147,7 @@ SRCS += ft_lstmap.c
 SRCS += ft_lstnew.c
 SRCS += ft_lstnew_str.c
 SRCS += ft_lstprint.c
+SRCS += ft_lst_to_char_tab.c
 
 #/////////////////////////////////////MEMORY////////////////////////////////////
 
