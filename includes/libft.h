@@ -26,7 +26,7 @@
 # include "process_str.h"
 # include "free.h"
 # include "sort.h"
-# define BUFF_SIZE	32
+# define BUF_SIZE	32
 # define TRUE		1
 # define FALSE		0
 # define SUCCESS	0

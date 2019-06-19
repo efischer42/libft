@@ -61,10 +61,10 @@ static int		ft_read(t_file *file, char **line)
 {
 	char	*tmp;
 	char	*tmp_rest;
-	char	buf[BUFF_SIZE + 1];
+	char	buf[BUF_SIZE + 1];
 	int		ret;
 
-	while ((ret = read(file->fd, buf, BUFF_SIZE)) > 0)
+	while ((ret = read(file->fd, buf, BUF_SIZE)) > 0)
 	{
 		buf[ret] = '\0';
 		if ((tmp_rest = ft_strchr(buf, '\n')))

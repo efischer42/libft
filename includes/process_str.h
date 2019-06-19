@@ -14,6 +14,9 @@
 # define PROCESS_STR_H
 
 # include "libft.h"
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 
 char	*ft_join_free(char *s1, char *s2, int op);
 char	*ft_strcapitalize(char *str);
@@ -42,5 +45,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		get_next_line_fd(const int fd, char **line);
 int		get_next_line(const int fd, char **line);
+
+int			get_next_line_test(const int fd, char **line);
 
 #endif
