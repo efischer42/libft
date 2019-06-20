@@ -106,6 +106,7 @@ SRCS += ft_strndup.c
 SRCS += ft_strcapitalize.c
 SRCS += ft_join_free.c
 SRCS += get_next_line.c
+SRCS += get_next_line_fd.c
 SRCS += ft_strndup_free.c
 
 #///////////////////////////////////// NBR /////////////////////////////////////

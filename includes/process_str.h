@@ -46,6 +46,4 @@ int		ft_toupper(int c);
 int		get_next_line_fd(const int fd, char **line);
 int		get_next_line(const int fd, char **line);
 
-int			get_next_line_test(const int fd, char **line);
-
 #endif
