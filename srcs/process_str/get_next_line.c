@@ -48,7 +48,7 @@ static int	read_line(const int fd, char **line, char **rest)
 	return (ret);
 }
 
-int			get_next_line_test(const int fd, char **line)
+int			get_next_line(const int fd, char **line)
 {
 	static char	*rest;
 	ssize_t		ret;

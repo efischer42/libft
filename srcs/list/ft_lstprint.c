@@ -28,11 +28,10 @@ int		ft_lstprint(t_list *lst, void (*f)(t_list*, t_list**))
 		tmp = str;
 		f(lst, &elem);
 		if (elem != NULL)
-		{
 			str = ft_memjoin(tmp, elem->content, len, elem->content_size);
-			len += elem->content_size;
-		}
+		len += elem->content_size;
 		free(tmp);
+		ft_strdel((char**)&elem->content);
 		free(elem);
 		lst = lst->next;
 	}
