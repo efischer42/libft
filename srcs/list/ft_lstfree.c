@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-void	ft_lstfree(t_list *lst, void (*f)(void*))
+void	ft_lstfree(t_list *lst, void (*f)(void*, size_t))
 {
 	if (lst == NULL)
 		return ;
-	f(lst->content);
+	f(lst->content, lst->content_size);
 	ft_lstfree(lst->next, f);
 	free(lst);
 }
