@@ -6,7 +6,7 @@
 #    By: efischer <efischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 10:22:22 by efischer          #+#    #+#              #
-#    Updated: 2019/07/10 18:45:26 by efischer         ###   ########.fr        #
+#    Updated: 2019/07/12 15:16:58 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ HEAD += nbr.h
 HEAD += sort.h
 HEAD += print.h
 HEAD += process_str.h
+HEAD += tab.h
 IFLAGS = -I
 
 #==================================== PATH =====================================
@@ -174,6 +175,10 @@ SRCS += ft_free_content.c
 SRCS += ft_selection_sort.c
 SRCS += ft_merge_sort.c
 
+#///////////////////////////////////// TAB /////////////////////////////////////
+
+SRCS += ft_tablen.c
+
 #////////////////////////////////// FT_PRINTF //////////////////////////////////
 
 SRCS += ft_printf.c
@@ -209,6 +214,7 @@ vpath %.c srcs/memory/
 vpath %.c srcs/list/
 vpath %.c srcs/free/
 vpath %.c srcs/sort/
+vpath %.c srcs/tab/
 vpath %.h $(PATHI)
 
 all: $(NAME)
