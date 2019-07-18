@@ -6,7 +6,7 @@
 #    By: efischer <efischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 10:22:22 by efischer          #+#    #+#              #
-#    Updated: 2019/07/12 15:16:58 by efischer         ###   ########.fr        #
+#    Updated: 2019/07/18 15:16:44 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,7 @@ SRCS += ft_str_is_numeric.c
 SRCS += ft_str_is_printable.c
 SRCS += ft_str_is_lowercase.c
 SRCS += ft_str_is_uppercase.c
+SRCS += ft_str_is_alnum.c
 
 #///////////////////////////////// ANALYSE_STR /////////////////////////////////
 
