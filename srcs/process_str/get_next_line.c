@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/23 11:38:28 by efischer          #+#    #+#             */
+/*   Updated: 2019/07/23 11:49:46 by efischer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "process_str.h"
 
 static int	read_rest(char **line, char **rest)
@@ -54,9 +66,15 @@ int			get_next_line(const int fd, char **line)
 	ssize_t		ret;
 
 	ret = 0;
-	*line = NULL;
+	if (fd == -42)
+	{
+		ft_strdel(line);
+		ft_strdel(&rest);
+		return (0);
+	}
 	if (fd < 0 || line == NULL)
 		return (EXIT_FAILURE);
+	*line = NULL;
 	if (rest != NULL)
 	{
 		if (read_rest(line, &rest) == TRUE)
