@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 13:03:15 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/18 13:03:18 by efischer         ###   ########.fr       */
+/*   Updated: 2019/07/27 12:45:25 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	**ft_lst_to_char_tab(t_list *lst, char *(*f)(t_list *))
 	if (lst == NULL || f == NULL)
 		return (NULL);
 	i = 0;
-	lst_len	= ft_lstlen(lst);
+	lst_len = ft_lstlen(lst);
 	tab = (char**)malloc(sizeof(char*) * (lst_len + 1));
 	if (tab == NULL)
 		return (NULL);
