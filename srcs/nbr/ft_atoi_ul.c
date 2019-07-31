@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_ul.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 15:23:07 by efischer          #+#    #+#             */
-/*   Updated: 2019/07/31 16:53:49 by efischer         ###   ########.fr       */
+/*   Created: 2019/07/31 16:55:03 by efischer          #+#    #+#             */
+/*   Updated: 2019/07/31 17:02:50 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+unsigned long long	ft_atoi_ul(const char *str)
 {
-	size_t	i;
-	int		nbr;
+	size_t				i;
+	unsigned long long	nbr;
 
 	i = 0;
 	nbr = 0;
@@ -25,5 +25,5 @@ int		ft_atoi(const char *str)
 		i++;
 	while (str[i] && ft_isdigit(str[i]))
 		nbr = str[i++] - '0' + nbr * 10;
-	return (str[0] == '-' ? -nbr : nbr);
+	return (nbr);
 }

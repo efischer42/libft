@@ -6,7 +6,7 @@
 #    By: efischer <efischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 10:22:22 by efischer          #+#    #+#              #
-#    Updated: 2019/07/18 15:16:44 by efischer         ###   ########.fr        #
+#    Updated: 2019/07/31 16:56:31 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -115,6 +115,7 @@ SRCS += ft_strndup_free.c
 
 SRCS += ft_abs.c
 SRCS += ft_atoi.c
+SRCS += ft_atoi_ul.c
 SRCS += ft_atoi_base.c
 SRCS += ft_factorial.c
 SRCS += ft_intlen.c
