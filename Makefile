@@ -185,6 +185,7 @@ SRCS += ft_tablen.c
 
 SRCS += ft_printf.c
 SRCS += ft_asprintf.c
+SRCS += ft_dprintf.c
 SRCS += ft_manage_conv.c
 SRCS += ft_util.c
 SRCS += ft_flag.c
@@ -204,6 +205,7 @@ SRCS += ft_round.c
 #==================================== OBJS =====================================
 
 OBJS = $(patsubst %.c, $(PATHO)%.o, $(SRCS))
+DOBJS = $(patsubst %.c, $(PATHO)%.o, $(SRCS))
 
 
 vpath %.c srcs/ft_printf/

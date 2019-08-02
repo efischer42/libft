@@ -75,6 +75,7 @@ typedef struct	s_flag
 
 int				ft_printf(const char *format, ...);
 char			*ft_asprintf(const char *format, ...);
+int				ft_dprintf(int fd, const char *format, ...);
 t_list			*ft_lstnew_str(char const *content, size_t content_size);
 char			*ft_process_flag(char **s, va_list *arg, t_flag *flag);
 void			ft_init_flag(t_flag *flag);
