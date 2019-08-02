@@ -19,6 +19,7 @@
 # include <fcntl.h>
 
 char	*ft_join_free(char *s1, char *s2, int op);
+char	**ft_split_white_spaces(char const *s);
 char	*ft_strcapitalize(char *str);
 char	*ft_strcat(char *s1, const char *s2);
 void	ft_strclr(char *s);

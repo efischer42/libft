@@ -110,6 +110,7 @@ SRCS += ft_join_free.c
 SRCS += get_next_line.c
 SRCS += get_next_line_fd.c
 SRCS += ft_strndup_free.c
+SRCS += ft_split_white_spaces.c
 
 #///////////////////////////////////// NBR /////////////////////////////////////
 

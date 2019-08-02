@@ -19,13 +19,13 @@ static void	ft_fill_tab(char **tab, char const *s, char c)
 	size_t			len;
 
 	j = 0;
-	while (*s)
+	while (*s != '\0')
 	{
 		if (*s != c)
 		{
 			i = 0;
 			len = 0;
-			while (s[len] != c && s[len])
+			while (s[len] != c && s[len] != '\0')
 				len++;
 			if (!(tab[j] = (char *)malloc(sizeof(char) * (len + 1))))
 			{
@@ -49,20 +49,21 @@ char		**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	count = 0;
-	if (!s)
+	if (s == NULL)
 		return (NULL);
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		if (s[i] != c)
 		{
 			count++;
-			while (s[i] != c && s[i])
+			while (s[i] != c && s[i] != '\0')
 				i++;
 		}
 		else
 			i++;
 	}
-	if (!(tab = (char **)malloc(sizeof(char *) * (count + 1))))
+	tab = (char **)malloc(sizeof(char *) * (count + 1));
+	if (tab == NULL)
 		return (NULL);
 	ft_fill_tab(tab, s, c);
 	tab[count] = 0;
