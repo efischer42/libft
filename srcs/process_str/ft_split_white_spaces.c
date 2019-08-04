@@ -1,5 +1,26 @@
 #include "libft.h"
 
+static int	count_word(char const *s)
+{
+	unsigned int	i;
+	unsigned int	count;
+
+	i = 0;
+	count = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != ' ' && s[i] != '\t')
+		{
+			count++;
+			while (s[i] != ' ' && s[i] != '\t' && s[i] != '\0')
+				i++;
+		}
+		else
+			i++;
+	}
+	return (count);
+}
+
 static void	ft_fill_tab(char **tab, char const *s)
 {
 	unsigned int	i;
@@ -31,26 +52,15 @@ static void	ft_fill_tab(char **tab, char const *s)
 
 char		**ft_split_white_spaces(char const *s)
 {
-	unsigned int	i;
 	unsigned int	count;
 	char			**tab;
 
-	i = 0;
-	count = 0;
 	if (s == NULL)
 		return (NULL);
-	while (s[i] != '\0')
-	{
-		if (s[i] != ' ' && s[i] != '\t')
-		{
-			count++;
-			while (s[i] != ' ' && s[i] != '\t' && s[i] != '\0')
-				i++;
-		}
-		else
-			i++;
-	}
-	tab = (char **)malloc(sizeof(char *) * (count + 1));
+	count = count_word(s);
+	if (count == 0)
+		return (NULL);
+	tab = (char**)malloc(sizeof(char*) * (count + 1));
 	if (tab == NULL)
 		return (NULL);
 	ft_fill_tab(tab, s);
