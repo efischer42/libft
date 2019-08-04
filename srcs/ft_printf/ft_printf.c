@@ -106,11 +106,24 @@ int				ft_printf(const char *format, ...)
 		va_end(arg);
 		len = out->len;
 		if (len != -1)
-			write(1, out->str, out->len);
+		{
+			if (write(1, out->str, out->len) == FAILURE)
+			{
+				free(out->str);
+				free(out);
+				return (FAILURE);
+			}
+		}
 		free(out->str);
 	}
 	else
-		write(1, format, ft_strlen(format));
+	{
+		if (write(1, format, len) == FAILURE)
+		{
+			free(out);
+			return (FAILURE);
+		}
+	}
 	free(out);
 	return (len);
 }

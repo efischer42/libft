@@ -94,11 +94,24 @@ int				ft_dprintf(int fd, const char *format, ...)
 		va_end(arg);
 		len = out->len;
 		if (len != -1)
-			write(fd, out->str, out->len);
+		{
+			if (write(fd, out->str, out->len) == FAILURE)
+			{
+				free(out->str);
+				free(out);
+				return (FAILURE);
+			}
+		}
 		free(out->str);
 	}
 	else
-		write(fd, format, ft_strlen(format));
+	{
+		if (write(fd, format, len) == FAILURE)
+		{
+			free(out);
+			return (FAILURE);
+		}
+	}
 	free(out);
 	return (len);
 }

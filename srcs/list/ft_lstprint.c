@@ -35,7 +35,8 @@ int		ft_lstprint(t_list *lst, void (*f)(t_list*, t_list**))
 		free(elem);
 		lst = lst->next;
 	}
-	write(1, str, len);
+	if (write(1, str, len) == FAILURE)
+		return (FAILURE);
 	free(str);
 	return (len);
 }
