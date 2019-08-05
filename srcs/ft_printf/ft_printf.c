@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:19:12 by efischer          #+#    #+#             */
-/*   Updated: 2019/08/05 16:18:32 by efischer         ###   ########.fr       */
+/*   Updated: 2019/08/05 16:29:07 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,12 @@ static void		ft_get_out(va_list *arg, t_out *out, char *str)
 	}
 }
 
-static int		process_format(t_out *out, ssize_t len, int fd)
+static int		process_format(t_out *out, ssize_t len)
 {
 	len = out->len;
 	if (len != -1)
 	{
-		if (write(fd, out->str, out->len) == FAILURE)
+		if (write(1, out->str, out->len) == FAILURE)
 		{
 			free(out->str);
 			free(out);
@@ -109,7 +109,7 @@ int				ft_printf(const char *format, ...)
 		va_start(arg, format);
 		ft_get_out(&arg, out, (char*)format);
 		va_end(arg);
-		if (process_format(out, len, fd) == FAILURE)
+		if (process_format(out, len) == FAILURE)
 			return (FAILURE);
 		free(out);
 		return (len);
