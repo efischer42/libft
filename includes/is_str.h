@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:14:39 by efischer          #+#    #+#             */
-/*   Updated: 2019/07/18 15:16:14 by efischer         ###   ########.fr       */
+/*   Updated: 2019/08/05 13:49:38 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		ft_isupper(int c);
 int		ft_isxdigit(int c);
 int		ft_str_is_alpha(const char *str);
 int		ft_str_is_alnum(const char *str);
+int		ft_str_is_blank(const char *str);
 int		ft_str_is_lowercase(const char *str);
 int		ft_str_is_numeric(const char *str);
 int		ft_str_is_printable(const char *str);

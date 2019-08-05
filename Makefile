@@ -6,7 +6,7 @@
 #    By: efischer <efischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 10:22:22 by efischer          #+#    #+#              #
-#    Updated: 2019/07/31 16:56:31 by efischer         ###   ########.fr        #
+#    Updated: 2019/08/05 13:49:10 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ CC = gcc
 CFLAGS += -Wall
 CFLAGS += -Wextra
 CFLAGS += -Werror
+#CFLAGS += -fsanitize=address,undefined -g3
 COMPILE += $(CC) -c
 
 #==================================== SRCS =====================================
@@ -61,6 +62,7 @@ SRCS += ft_isupper.c
 SRCS += ft_isxdigit.c
 SRCS += ft_str_is_alpha.c
 SRCS += ft_str_is_numeric.c
+SRCS += ft_str_is_blank.c
 SRCS += ft_str_is_printable.c
 SRCS += ft_str_is_lowercase.c
 SRCS += ft_str_is_uppercase.c

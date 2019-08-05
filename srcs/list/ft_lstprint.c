@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:22:03 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/18 14:17:14 by efischer         ###   ########.fr       */
+/*   Updated: 2019/08/05 11:13:14 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_lstprint(t_list *lst, void (*f)(t_list*, t_list**))
 	void	*str;
 	void	*tmp;
 	t_list	*elem;
-	size_t	len;
+	ssize_t	len;
 
 	len = 0;
 	str = NULL;
@@ -36,7 +36,7 @@ int		ft_lstprint(t_list *lst, void (*f)(t_list*, t_list**))
 		lst = lst->next;
 	}
 	if (write(1, str, len) == FAILURE)
-		return (FAILURE);
+		len = FAILURE;
 	free(str);
 	return (len);
 }
