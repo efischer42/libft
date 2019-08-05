@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:22:03 by efischer          #+#    #+#             */
-/*   Updated: 2019/08/05 11:13:14 by efischer         ###   ########.fr       */
+/*   Updated: 2019/08/05 16:52:45 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@ int		ft_lstprint(t_list *lst, void (*f)(t_list*, t_list**))
 	{
 		tmp = str;
 		f(lst, &elem);
-		if (elem != NULL)
-			str = ft_memjoin(tmp, elem->content, len, elem->content_size);
+		if (elem == NULL)
+			break ;
+		str = ft_memjoin(tmp, elem->content, len, elem->content_size);
 		len += elem->content_size;
 		free(tmp);
 		ft_strdel((char**)&elem->content);
