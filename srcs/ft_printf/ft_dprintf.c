@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_dprintf.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/05 14:24:10 by efischer          #+#    #+#             */
+/*   Updated: 2019/08/05 14:32:41 by efischer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static void		ft_memjoin_free(t_out *t1, t_tmp *t2)
@@ -75,11 +87,27 @@ static void		ft_get_out(va_list *arg, t_out *out, char *str)
 	}
 }
 
+static int		process_format(t_out *out, ssize_t len, int fd)
+{
+	len = out->len;
+	if (len != -1)
+	{
+		if (write(fd, out->str, out->len) == FAILURE)
+		{
+			free(out->str);
+			free(out);
+			return (FAILURE);
+		}
+	}
+	free(out->str);
+	return (SUCCESS);
+}
+
 int				ft_dprintf(int fd, const char *format, ...)
 {
 	va_list	arg;
 	t_out	*out;
-	int		len;
+	ssize_t	len;
 
 	if (!format)
 		return (0);
@@ -92,26 +120,13 @@ int				ft_dprintf(int fd, const char *format, ...)
 		va_start(arg, format);
 		ft_get_out(&arg, out, (char*)format);
 		va_end(arg);
-		len = out->len;
-		if (len != -1)
-		{
-			if (write(fd, out->str, out->len) == FAILURE)
-			{
-				free(out->str);
-				free(out);
-				return (FAILURE);
-			}
-		}
-		free(out->str);
-	}
-	else
-	{
-		if (write(fd, format, len) == FAILURE)
-		{
-			free(out);
+		if (process_format(out, len, fd) == FAILURE)
 			return (FAILURE);
-		}
+		free(out);
+		return (len);
 	}
+	if (write(fd, format, len) == FAILURE)
+		len = FAILURE;
 	free(out);
 	return (len);
 }
