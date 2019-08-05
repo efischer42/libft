@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:14:33 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/06 15:14:36 by efischer         ###   ########.fr       */
+/*   Updated: 2019/08/05 16:15:25 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,6 @@ char			*ft_printfloat(double f);
 int				ft_check_unicode(char *s, unsigned int c);
 char			*ft_putunicode(wchar_t *ws);
 unsigned int	ft_convert_to_unicode(unsigned int c);
+void			ft_memjoin_free(t_out *t1, t_tmp *t2);
 
 #endif

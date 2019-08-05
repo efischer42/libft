@@ -6,22 +6,11 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 14:24:10 by efischer          #+#    #+#             */
-/*   Updated: 2019/08/05 14:32:41 by efischer         ###   ########.fr       */
+/*   Updated: 2019/08/05 16:14:41 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-static void		ft_memjoin_free(t_out *t1, t_tmp *t2)
-{
-	void	*tmp;
-
-	tmp = t1->str;
-	t1->str = ft_memjoin(tmp, t2->str, t1->len, t2->len);
-	free(tmp);
-	free(t2->str);
-	t1->len += t2->len;
-}
 
 static void		ft_check_return(t_out *out, t_tmp *tmp, t_flag *flag)
 {

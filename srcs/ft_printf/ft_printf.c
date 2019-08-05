@@ -6,22 +6,11 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:19:12 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/06 15:19:14 by efischer         ###   ########.fr       */
+/*   Updated: 2019/08/05 16:18:32 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-static void		ft_memjoin_free(t_out *t1, t_tmp *t2)
-{
-	void	*tmp;
-
-	tmp = t1->str;
-	t1->str = ft_memjoin(tmp, t2->str, t1->len, t2->len);
-	free(tmp);
-	free(t2->str);
-	t1->len += t2->len;
-}
 
 static void		ft_check_return(t_out *out, t_tmp *tmp, t_flag *flag)
 {
@@ -87,6 +76,22 @@ static void		ft_get_out(va_list *arg, t_out *out, char *str)
 	}
 }
 
+static int		process_format(t_out *out, ssize_t len, int fd)
+{
+	len = out->len;
+	if (len != -1)
+	{
+		if (write(fd, out->str, out->len) == FAILURE)
+		{
+			free(out->str);
+			free(out);
+			return (FAILURE);
+		}
+	}
+	free(out->str);
+	return (SUCCESS);
+}
+
 int				ft_printf(const char *format, ...)
 {
 	va_list	arg;
@@ -104,26 +109,13 @@ int				ft_printf(const char *format, ...)
 		va_start(arg, format);
 		ft_get_out(&arg, out, (char*)format);
 		va_end(arg);
-		len = out->len;
-		if (len != -1)
-		{
-			if (write(1, out->str, out->len) == FAILURE)
-			{
-				free(out->str);
-				free(out);
-				return (FAILURE);
-			}
-		}
-		free(out->str);
-	}
-	else
-	{
-		if (write(1, format, len) == FAILURE)
-		{
-			free(out);
+		if (process_format(out, len, fd) == FAILURE)
 			return (FAILURE);
-		}
+		free(out);
+		return (len);
 	}
+	if (write(1, format, len) == FAILURE)
+		len = FAILURE;
 	free(out);
 	return (len);
 }
