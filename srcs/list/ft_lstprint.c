@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:22:03 by efischer          #+#    #+#             */
-/*   Updated: 2019/08/05 16:52:45 by efischer         ###   ########.fr       */
+/*   Updated: 2019/08/07 11:38:54 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int		ft_lstprint(t_list *lst, void (*f)(t_list*, t_list**))
 
 	len = 0;
 	str = NULL;
-	if (lst == NULL || f == NULL)
+	if (lst == NULL)
+		return (SUCCESS);
+	if (f == NULL)
 		return (FAILURE);
 	while (lst != NULL)
 	{
