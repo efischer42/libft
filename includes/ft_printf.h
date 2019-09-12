@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:14:33 by efischer          #+#    #+#             */
-/*   Updated: 2019/08/05 16:15:25 by efischer         ###   ########.fr       */
+/*   Updated: 2019/09/12 14:25:13 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@
 typedef struct	s_out
 {
 	void		*str;
-	int			len;
+	ssize_t		len;
 }				t_out;
 
 typedef struct	s_tmp

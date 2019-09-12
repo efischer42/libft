@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 17:52:54 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/06 17:53:05 by efischer         ###   ########.fr       */
+/*   Updated: 2019/09/12 14:24:15 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct		s_file
 	char			*rest;
 	char			*cur;
 	int				fd;
+	char			pad[4];
 }					t_file;
 
 #endif
