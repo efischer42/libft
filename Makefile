@@ -6,7 +6,7 @@
 #    By: efischer <efischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 10:22:22 by efischer          #+#    #+#              #
-#    Updated: 2019/09/12 14:22:47 by efischer         ###   ########.fr        #
+#    Updated: 2019/09/18 15:56:44 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ CFLAGS += -Wextra
 CFLAGS += -Werror
 CFLAGS += -pedantic
 CFLAGS += -Wpadded
-#CFLAGS += -fsanitize=address,undefined -g3
+CFLAGS += -fsanitize=address,undefined -g3
 COMPILE += $(CC) -c
 
 #==================================== SRCS =====================================
