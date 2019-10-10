@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:21:37 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/06 15:21:38 by efischer         ###   ########.fr       */
+/*   Updated: 2019/10/10 14:55:30 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list	*tmp;
 
-	if (!*alst || !del)
+	if (*alst == NULL || del == NULL)
 		return ;
 	while (*alst)
 	{

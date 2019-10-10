@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libstruct.h                                        :+:      :+:    :+:   */
+/*   ft_dblstdel.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 17:52:54 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/10 14:25:06 by efischer         ###   ########.fr       */
+/*   Created: 2019/10/10 14:52:23 by efischer          #+#    #+#             */
+/*   Updated: 2019/10/10 14:57:15 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBSTRUCT_H
-# define LIBSTRUCT_H
+#include "libft.h"
 
-# include "libft.h"
-
-typedef struct		s_list
+void	ft_dblstdel(t_dblist **alst, void (*del)(void*, size_t))
 {
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
+	t_dblist	*tmp;
 
-typedef struct		s_dblist
-{
-	void			*content;
-	size_t			content_size;
-	struct s_dblist	*prev;
-	struct s_dblist	*next;
-}					t_dblist;
-
-typedef struct		s_file
-{
-	char			*rest;
-	char			*cur;
-	int				fd;
-	char			pad[4];
-}					t_file;
-
-#endif
+	if (alst == NULL || del == NULL)
+		return ;
+	while (*alst != NULL)
+	{
+		tmp = *alst;
+		if ((*alst)->content != NULL)
+			del((*alst)->content, (*alst)->content_size);
+		*alst = tmp->next;
+		free(tmp);
+		tmp = NULL;
+	}
+}

@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstprint.c                                      :+:      :+:    :+:   */
+/*   ft_dblstprint.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 15:22:03 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/10 16:34:36 by efischer         ###   ########.fr       */
+/*   Created: 2019/10/10 15:10:17 by efischer          #+#    #+#             */
+/*   Updated: 2019/10/10 16:38:32 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*get_str_to_print(ssize_t *len, t_list *lst,
-			void (*f)(t_list*, t_list**))
+static void	*get_str_to_print(ssize_t *len, t_dblist *dblst,
+			void (*f)(t_dblist*, t_dblist**))
 {
-	t_list	*elem;
-	void	*str;
-	void	*tmp;
+	t_dblist	*elem;
+	void		*str;
+	void		*tmp;
 
 	str = NULL;
-	while (lst != NULL)
+	while (dblst != NULL)
 	{
 		tmp = str;
-		f(lst, &elem);
+		f(dblst, &elem);
 		if (elem == NULL)
 			break ;
 		str = ft_memjoin(tmp, elem->content, *len, elem->content_size);
@@ -31,22 +31,22 @@ static void	*get_str_to_print(ssize_t *len, t_list *lst,
 		free(tmp);
 		ft_strdel((char**)&elem->content);
 		free(elem);
-		lst = lst->next;
+		dblst = dblst->next;
 	}
 	return (str);
 }
 
-int			ft_lstprint(t_list *lst, void (*f)(t_list*, t_list**))
+int			ft_dblstprint(t_dblist *dblst, void (*f)(t_dblist*, t_dblist**))
 {
 	void	*str;
 	ssize_t	len;
 
 	len = 0;
-	if (lst == NULL)
+	if (dblst == NULL)
 		return (SUCCESS);
 	if (f == NULL)
 		return (FAILURE);
-	str = get_str_to_print(&len, lst, f);
+	str = get_str_to_print(&len, dblst, f);
 	if (write(1, str, len) == FAILURE)
 		len = FAILURE;
 	free(str);

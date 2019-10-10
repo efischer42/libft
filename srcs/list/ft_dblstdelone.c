@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstfree.c                                       :+:      :+:    :+:   */
+/*   ft_dblstdelone.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 15:21:44 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/18 14:40:42 by efischer         ###   ########.fr       */
+/*   Created: 2019/10/10 14:59:59 by efischer          #+#    #+#             */
+/*   Updated: 2019/10/10 15:03:02 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstfree(t_list *lst, void (*f)(void*, size_t))
+void	ft_dblstdelone(t_dblist **alst, void (*del)(void*, size_t))
 {
-	if (lst == NULL)
+	if (alst == NULL || del == NULL)
 		return ;
-	f(lst->content, lst->content_size);
-	ft_lstfree(lst->next, f);
-	free(lst);
+	if ((*alst)->content != NULL)
+		del((*alst)->content, (*alst)->content_size);
+	free(*alst);
+	*alst = NULL;
 }

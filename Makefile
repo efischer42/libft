@@ -6,7 +6,7 @@
 #    By: efischer <efischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 10:22:22 by efischer          #+#    #+#              #
-#    Updated: 2019/09/18 15:56:44 by efischer         ###   ########.fr        #
+#    Updated: 2019/10/10 16:34:32 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -146,16 +146,21 @@ SRCS += ft_print_tab.c
 #//////////////////////////////////// LIST /////////////////////////////////////
 
 SRCS += ft_lstadd.c
+SRCS += ft_dblstadd.c
 SRCS += ft_lstaddend.c
+SRCS += ft_dblstaddend.c
 SRCS += ft_lstdel.c
+SRCS += ft_dblstdel.c
 SRCS += ft_lstdelone.c
-SRCS += ft_lstfree.c
+SRCS += ft_dblstdelone.c
 SRCS += ft_lstiter.c
 SRCS += ft_lstlen.c
 SRCS += ft_lstmap.c
 SRCS += ft_lstnew.c
+SRCS += ft_dblstnew.c
 SRCS += ft_lstnew_str.c
 SRCS += ft_lstprint.c
+SRCS += ft_dblstprint.c
 SRCS += ft_lst_to_char_tab.c
 SRCS += ft_lstcpy.c
 
