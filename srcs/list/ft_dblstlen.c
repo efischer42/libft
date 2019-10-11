@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlen.c                                        :+:      :+:    :+:   */
+/*   ft_dblstlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/08 14:01:30 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/11 11:33:27 by efischer         ###   ########.fr       */
+/*   Created: 2019/10/11 11:30:01 by efischer          #+#    #+#             */
+/*   Updated: 2019/10/11 11:35:02 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "list.h"
 
-size_t	ft_lstlen(t_list *lst)
+size_t	ft_dblstlen(t_dblist *dblst)
 {
 	size_t	len;
 
 	len = 0;
-	while (lst != NULL)
+	while (dblst != NULL)
 	{
 		len++;
-		lst = lst->next;
+		dblst = dblst->next;
 	}
 	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:15:24 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/10 16:34:32 by efischer         ###   ########.fr       */
+/*   Updated: 2019/10/11 11:33:53 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void		ft_dblstdelone(t_dblist **alst, void (*del)(void*, size_t));
 void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 size_t		ft_lstlen(t_list *lst);
+size_t		ft_dblstlen(t_dblist *dblst);
 t_list		*ft_lstnew(void const *content, size_t content_size);
 t_dblist	*ft_dblstnew(void const *content, size_t content_size);
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
