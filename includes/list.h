@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:15:24 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/11 11:33:53 by efischer         ###   ########.fr       */
+/*   Updated: 2019/10/11 13:09:43 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ t_list		*ft_lstnew_str(char const *content, size_t content_size);
 int			ft_lstprint(t_list *lst, void (*f)(t_list*, t_list**));
 int			ft_dblstprint(t_dblist *dblst, void (*f)(t_dblist*, t_dblist**));
 char		**ft_lst_to_char_tab(t_list *lst, char *(*f)(t_list *));
+char		**ft_dblst_to_char_tab(t_dblist *dblst, char *(*f)(t_dblist*));
 t_list		*ft_lstcpy(t_list *lst, t_list *(*f)(t_list*));
 
 #endif

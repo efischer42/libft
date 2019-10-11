@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_to_char_tab.c                               :+:      :+:    :+:   */
+/*   ft_dblst_to_char_tab.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/18 13:03:15 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/11 13:09:29 by efischer         ###   ########.fr       */
+/*   Created: 2019/10/11 12:59:59 by efischer          #+#    #+#             */
+/*   Updated: 2019/10/11 13:09:34 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "list.h"
 
-char	**ft_lst_to_char_tab(t_list *lst, char *(*f)(t_list *))
+char	**ft_dblst_to_char_tab(t_dblist *dblst, char *(*f)(t_dblist*))
 {
 	char	**tab;
 	char	*tmp;
-	size_t	lst_len;
+	size_t	len;
 	size_t	i;
 
-	if (lst == NULL || f == NULL)
+	if (dblst == NULL || f == NULL)
 		return (NULL);
 	i = 0;
-	lst_len = ft_lstlen(lst);
-	tab = (char**)malloc(sizeof(char*) * (lst_len + 1));
+	len = ft_dblstlen(dblst);
+	tab = (char**)malloc(sizeof(char*) * (len + 1));
 	if (tab == NULL)
 		return (NULL);
-	while (lst != NULL)
+	while (dblst != NULL)
 	{
 		tmp = f(lst);
 		tab[i] = ft_strdup(tmp);
