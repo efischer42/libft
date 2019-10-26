@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:32:07 by efischer          #+#    #+#             */
-/*   Updated: 2019/07/12 15:15:24 by efischer         ###   ########.fr       */
+/*   Updated: 2019/10/26 13:52:09 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # include "free.h"
 # include "sort.h"
 # include "tab.h"
+# include "vctlib.h"
 
 # define BUF_SIZE	32
 # define TRUE		1
