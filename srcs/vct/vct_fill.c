@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vct_new.c                                          :+:      :+:    :+:   */
+/*   vct_fill.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/29 12:07:48 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/29 12:57:54 by efischer         ###   ########.fr       */
+/*   Created: 2019/10/29 12:31:17 by efischer          #+#    #+#             */
+/*   Updated: 2019/10/29 13:44:36 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"vctlib.h"
+#include "vctlib.h"
 
-t_vector	*vct_new(void)
+void	vct_fill(char *str, t_vector *vct)
 {
-	t_vector	*vct;
+	size_t	len;
 
-	vct = (t_vector*)malloc(sizeof(t_vector));
 	if (vct == NULL)
-		return (NULL);
-	vct->len = 0;
-	vct->size = DFL_SIZE;
-	vct->scale = DFL_SCALE;
-	vct->str = (char*)malloc(sizeof(char) * vct->size);
-	ft_bzero(vct->str, vct->size);
-	return (vct);
+		return ;
+	len = ft_strlen(str);
+	str = ft_memjoin(vct->str, str, vct->len, len);
+	vct->len += len;
+	if (vct->len > vct->size)
+		vct_resize(vct);
+	vct->str = (char*)ft_memcpy(vct->str, str, vct->len);
+	vct->str[vct->len] = '\0';
 }
