@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vct_clear.c                                        :+:      :+:    :+:   */
+/*   vct_addchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/29 14:24:31 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/29 15:04:48 by efischer         ###   ########.fr       */
+/*   Created: 2019/10/29 15:02:28 by efischer          #+#    #+#             */
+/*   Updated: 2019/10/29 15:17:03 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vctlib.h"
 
-void	vct_clear(t_vector *vct)
+void	vct_addchar(const char c, t_vector *vct)
 {
-	if (vct != NULL)
-		ft_bzero(vct->str, vct->size);
+	if (vct == NULL)
+		return ;
+	if (vct->len + 1 > vct->size)
+		vct_resize(vct);
+	vct->str[vct->len] = c;
 }

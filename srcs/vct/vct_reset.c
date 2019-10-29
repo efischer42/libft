@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 14:26:38 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/29 14:34:15 by efischer         ###   ########.fr       */
+/*   Updated: 2019/10/29 15:06:16 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	vct_reset(t_vector *vct)
 {
+	if (vct == NULL)
+		return ;
 	ft_strdel(&vct->str);
 	vct->len = 0;
 	vct->size = DFL_SIZE;

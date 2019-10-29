@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 12:06:54 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/29 14:19:26 by efischer         ###   ########.fr       */
+/*   Updated: 2019/10/29 14:43:06 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_vector	*vct_newstr(const char *str)
 		vct->len = ft_strlen(str);
 		vct->size = DFL_SIZE;
 		vct->scale = DFL_SCALE;
-		if (vct->len > vct->size)
+		if (vct->len + 1 > vct->size)
 			vct_resize(vct);
 		else
 			vct->str = (char*)malloc(sizeof(char) * vct->size);
