@@ -6,7 +6,7 @@
 #    By: efischer <efischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 10:22:22 by efischer          #+#    #+#              #
-#    Updated: 2019/10/29 12:37:47 by efischer         ###   ########.fr        #
+#    Updated: 2019/10/29 14:31:14 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -253,7 +253,9 @@ SRCS += ft_round.c
 SRCS += vct_newstr.c
 SRCS += vct_new.c
 SRCS += vct_resize.c
-SRCS += vct_fill.c
+SRCS += vct_addstr.c
+SRCS += vct_clear.c
+SRCS += vct_reset.c
 
 #==============================================================================#
 #==================================== OBJS ====================================#

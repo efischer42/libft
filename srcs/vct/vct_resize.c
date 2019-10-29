@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 12:23:20 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/29 13:47:35 by efischer         ###   ########.fr       */
+/*   Updated: 2019/10/29 14:19:59 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ void	vct_resize(t_vector	*vct)
 	vct->str = (char*)malloc(sizeof(char) * vct->size);
 	ft_bzero(vct->str, vct->size);
 	if (vct->str != NULL)
-	{
-		vct->str = (char*)ft_memcpy(vct->str, content, len);
-		vct->str[vct->len] = '\0';
-	}
+		vct->str = (char*)ft_memmove(vct->str, content, len);
 	ft_strdel(&content);
 }
