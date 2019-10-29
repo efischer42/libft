@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/26 12:13:44 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/29 15:23:46 by efischer         ###   ########.fr       */
+/*   Updated: 2019/10/29 16:14:28 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ void		vct_clear(t_vector *vct);
 void		vct_reset(t_vector *vct);
 void		vct_addchar(const char c, t_vector *vct);
 void		vct_pushchar(const char c, t_vector *vct);
+void		vct_del(t_vector *vct);
 
 #endif
