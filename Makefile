@@ -57,6 +57,7 @@ HEAD += sort.h
 HEAD += print.h
 HEAD += process_str.h
 HEAD += tab.h
+HEAD += token.h
 IFLAGS = -I
 
 #==============================================================================#
