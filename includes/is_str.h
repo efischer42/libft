@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:14:39 by efischer          #+#    #+#             */
-/*   Updated: 2019/08/05 13:49:38 by efischer         ###   ########.fr       */
+/*   Updated: 2019/12/02 15:50:07 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
-int		ft_isdigit(int c);
-int		ft_isprint(int c);
 int		ft_isblank(int c);
 int		ft_iscntrl(int c);
+int		ft_isdigit(int c);
 int		ft_isgraph(int c);
+int		ft_ismeta(int c);
+int		ft_isprint(int c);
 int		ft_islower(int c);
 int		ft_isspace(int c);
 int		ft_isupper(int c);

@@ -6,7 +6,7 @@
 #    By: efischer <efischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 10:22:22 by efischer          #+#    #+#              #
-#    Updated: 2019/10/29 16:14:30 by efischer         ###   ########.fr        #
+#    Updated: 2019/12/02 15:49:39 by efischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,6 +93,7 @@ SRCS += ft_isblank.c
 SRCS += ft_iscntrl.c
 SRCS += ft_isdigit.c
 SRCS += ft_isgraph.c
+SRCS += ft_ismeta.c
 SRCS += ft_isprint.c
 SRCS += ft_islower.c
 SRCS += ft_isspace.c

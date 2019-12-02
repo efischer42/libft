@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   token.h                                            :+:      :+:    :+:   */
+/*   ft_ismeta.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/19 10:11:03 by efischer          #+#    #+#             */
-/*   Updated: 2019/12/02 15:40:43 by efischer         ###   ########.fr       */
+/*   Created: 2019/12/02 15:44:28 by efischer          #+#    #+#             */
+/*   Updated: 2019/12/02 15:47:53 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TOKEN_H
-# define TOKEN_H
+#include "libft.h"
 
-# include "libft.h"
-
-# define NB_TOKEN	13
-# define TAB_END	-1 
-
-enum	e_token
+int		ft_ismeta(int c)
 {
-	PIPE,
-	AND,
-	SEMICOLON,
-	OP_BRACKET,
-	CL_BRACKET,
-	R_DB_REDIR,
-	L_DB_REDIR,
-	R_REDIR,
-	L_REDIR,
-	COMMENT,
-	WORD,
-	START,
-	END
-};
+	int		ret;
 
-int		lexer(const char* str, t_list **lst);
-void	debug(t_list *lst);
-
-#endif
+	ret = FALSE;
+	if (c == '|' || c == '&' || c == ';' || c == '(' || c == ')'
+		|| c == '<' || c == '>')
+	{
+		ret = TRUE;
+	}
+	return (ret);
+}
