@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 10:11:03 by efischer          #+#    #+#             */
-/*   Updated: 2019/12/02 15:40:43 by efischer         ###   ########.fr       */
+/*   Updated: 2019/12/02 16:48:17 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,14 @@ enum	e_token
 	L_DB_REDIR,
 	R_REDIR,
 	L_REDIR,
-	COMMENT,
 	WORD,
+	COMMENT,
 	START,
 	END
 };
 
 int		lexer(const char* str, t_list **lst);
+int		parser(t_list *lst);
 void	debug(t_list *lst);
 
 #endif
