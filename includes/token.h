@@ -38,5 +38,6 @@ enum	e_token
 int		lexer(const char* str, t_list **lst);
 int		parser(t_list *lst);
 void	debug(t_list *lst);
+void	del_list(t_list *job_lst);
 
 #endif
