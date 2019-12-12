@@ -29,7 +29,6 @@
 # include "free.h"
 # include "sort.h"
 # include "tab.h"
-# include "token.h"
 # include "vctlib.h"
 
 # define BUF_SIZE	32

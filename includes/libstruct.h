@@ -38,10 +38,4 @@ typedef struct		s_file
 	char			pad[4];
 }					t_file;
 
-typedef struct		s_token
-{
-	uint64_t		type;
-	char			*value;
-}					t_token;
-
 #endif
