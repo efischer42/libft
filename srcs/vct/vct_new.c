@@ -12,18 +12,19 @@
 
 #include	"vctlib.h"
 
-int		vct_new(t_vector *vct)
+t_vector	*vct_new(void)
 {
-	int		ret;
+	t_vector	*vct;
 
-	ret = SUCCESS;
-	vct->len = 0;
-	vct->size = DFL_SIZE;
-	vct->scale = DFL_SCALE;
-	vct->str = (char*)malloc(sizeof(char) * vct->size);
-	if (vct->str != NULL)
-		ft_bzero(vct->str, vct->size);
-	else
-		ret = FAILURE;
-	return (ret);
+	vct = (t_vector*)malloc(sizeof(t_vector));
+	if (vct != NULL)
+	{
+		vct->len = 0;
+		vct->size = DFL_SIZE;
+		vct->scale = DFL_SCALE;
+		vct->str = (char*)malloc(sizeof(char) * vct->size);
+		if (vct->str != NULL)
+			ft_bzero(vct->str, vct->size);
+	}
+	return (vct);
 }

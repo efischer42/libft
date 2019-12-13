@@ -12,25 +12,23 @@
 
 #include	"vctlib.h"
 
-int		vct_newstr(t_vector *vct, const char *str)
+t_vector	*vct_newstr(const char *str)
 {
-	int		ret;
+	t_vector	*vct;
 
-	ret = SUCCESS;
-	vct->len = ft_strlen(str);
-	vct->size = DFL_SIZE;
-	vct->scale = DFL_SCALE;
-	if (vct->len + 1 > vct->size)
-		ret = vct_resize(vct);
-	else
-		vct->str = (char*)malloc(sizeof(char) * vct->size);
-	if (ret == SUCCESS)
+	vct = (t_vector*)malloc(sizeof(t_vector));
+	if (vct != NULL)
 	{
+		vct->len = ft_strlen(str);
+		vct->size = DFL_SIZE;
+		vct->scale = DFL_SCALE;
+		if (vct->len + 1 > vct->size)
+			vct_resize(vct);
+		else
+			vct->str = (char*)malloc(sizeof(char) * vct->size);
 		ft_bzero(vct->str, vct->size);
 		if (vct->str != NULL)
 			vct->str = (char*)ft_memmove(vct->str, str, vct->len);
-		else
-			ret = FAILURE;
 	}
-	return (ret);
+	return (vct);
 }
