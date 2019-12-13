@@ -12,25 +12,46 @@
 
 #include	"vctlib.h"
 
-void	vct_resize(t_vector	*vct)
+static char	*get_content(t_vector *vct)
 {
 	size_t		overflow;
 	size_t		align;
 	char		*content;
-	size_t		len;
 
-	if (vct == NULL)
-		return ;
 	overflow = vct->len - vct->size;
 	align = overflow - overflow % DFL_SCALE;
 	vct->scale = 2 * align;
 	vct->size += vct->scale;
 	content = ft_strdup(vct->str);
-	len = ft_strlen(content);
 	ft_strdel(&(vct->str));
-	vct->str = (char*)malloc(sizeof(char) * vct->size);
-	ft_bzero(vct->str, vct->size);
-	if (vct->str != NULL)
-		vct->str = (char*)ft_memmove(vct->str, content, len);
-	ft_strdel(&content);
+	return (content);
+}
+
+int			vct_resize(t_vector	*vct)
+{
+	char		*content;
+	size_t		len;
+	int			ret;
+
+	ret = SUCCESS;
+	if (vct == NULL)
+		ret = FAILURE;
+	else
+	{
+		content = get_content(vct);
+		if (content == NULL)
+			ret = FAILURE;
+		else
+		{
+			len = ft_strlen(content);
+			vct->str = (char*)malloc(sizeof(char) * vct->size);
+			ft_bzero(vct->str, vct->size);
+			if (vct->str != NULL)
+				vct->str = (char*)ft_memmove(vct->str, content, len);
+			else
+				ret = FAILURE;
+			ft_strdel(&content);
+		}
+	}
+	return (ret);
 }

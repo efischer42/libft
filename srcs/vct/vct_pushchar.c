@@ -12,17 +12,31 @@
 
 #include "vctlib.h"
 
-void	vct_pushchar(const char c, t_vector *vct)
+int		vct_pushchar(const char c, t_vector *vct)
 {
 	char	*content;
+	int		ret;
 
+	ret = SUCCESS;
 	if (vct == NULL)
-		return ;
-	if (vct->len + 1 > vct->size)
-		vct_resize(vct);
-	content = ft_strdup(vct->str);
-	vct_clear(vct);
-	vct->str[0] = c;
-	vct->str = ft_strcat(vct->str, content);
-	ft_strdel(&content);
+		ret = FAILURE;
+	else
+	{
+		if (vct->len + 1 > vct->size)
+			ret = vct_resize(vct);
+		if (ret == SUCCESS)
+		{
+			content = ft_strdup(vct->str);
+			if (content == NULL)
+				ret = FAILURE;
+			else
+			{
+				vct_clear(vct);
+				vct->str[0] = c;
+				vct->str = ft_strcat(vct->str, content);
+				ft_strdel(&content);
+			}
+		}
+	}
+	return (ret);
 }

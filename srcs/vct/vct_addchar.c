@@ -12,11 +12,19 @@
 
 #include "vctlib.h"
 
-void	vct_addchar(const char c, t_vector *vct)
+int		vct_addchar(const char c, t_vector *vct)
 {
+	int		ret;
+
+	ret = SUCCESS;
 	if (vct == NULL)
-		return ;
-	if (vct->len + 1 > vct->size)
-		vct_resize(vct);
-	vct->str[vct->len] = c;
+		ret = FAILURE;
+	else
+	{
+		if (vct->len + 1 > vct->size)
+			ret = vct_resize(vct);
+		if (ret == SUCCESS)
+			vct->str[vct->len] = c;
+	}
+	return (ret);
 }

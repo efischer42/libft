@@ -26,15 +26,15 @@ typedef struct	s_vector
 	size_t	scale;
 }				t_vector;
 
-t_vector	*vct_newstr(const char *str);
-t_vector	*vct_new(void);
-void		vct_resize(t_vector	*vct);
-void		vct_addstr(const char *str, t_vector *vct);
-void		vct_pushstr(const char *str, t_vector *vct);
+int			vct_newstr(t_vector *vct, const char *str);
+int			vct_new(t_vector *vct);
+int			vct_resize(t_vector	*vct);
+int			vct_addstr(const char *str, t_vector *vct);
+int			vct_pushstr(const char *str, t_vector *vct);
 void		vct_clear(t_vector *vct);
-void		vct_reset(t_vector *vct);
-void		vct_addchar(const char c, t_vector *vct);
-void		vct_pushchar(const char c, t_vector *vct);
+int			vct_reset(t_vector *vct);
+int			vct_addchar(const char c, t_vector *vct);
+int			vct_pushchar(const char c, t_vector *vct);
 void		vct_del(t_vector *vct);
 
 #endif
