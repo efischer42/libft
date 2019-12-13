@@ -30,8 +30,9 @@ static int	push(const char *str, t_vector *vct)
 			ret = FAILURE;
 		else
 		{
-			vct->str = ft_memmove(vct->str, str, len);
-			ret = vct_addstr(content, vct);
+			vct_clear(vct);
+			ft_strcpy(vct->str, str);
+			vct->str = ft_strcat(vct->str, content);
 			ft_strdel(&content);
 		}
 	}

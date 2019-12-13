@@ -35,6 +35,8 @@ void		vct_clear(t_vector *vct);
 int			vct_reset(t_vector *vct);
 int			vct_addchar(const char c, t_vector *vct);
 int			vct_pushchar(const char c, t_vector *vct);
+int			vct_insertchar(const char c, const size_t pos, t_vector *vct);
+int			vct_insertstr(const char *str, const size_t pos, t_vector *vct);
 void		vct_del(t_vector *vct);
 
 #endif
