@@ -2,6 +2,9 @@
 
 void	vct_dellastchar(t_vector *vct)
 {
-	vct->len--;
-	vct->str[vct->len] = '\0';
+	if (vct != NULL)
+	{
+		vct->len--;
+		vct->str[vct->len] = '\0';
+	}
 }

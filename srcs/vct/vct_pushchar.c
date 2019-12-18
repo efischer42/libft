@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/29 15:19:53 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/29 15:24:43 by efischer         ###   ########.fr       */
+/*   Updated: 2019/12/18 11:44:23 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int		vct_pushchar(const char c, t_vector *vct)
 {
-	char	*content;
 	int		ret;
 
 	ret = SUCCESS;
@@ -26,16 +25,9 @@ int		vct_pushchar(const char c, t_vector *vct)
 			ret = vct_resize(vct);
 		if (ret == SUCCESS)
 		{
-			content = ft_strdup(vct->str);
-			if (content == NULL)
-				ret = FAILURE;
-			else
-			{
-				vct_clear(vct);
-				vct->str[0] = c;
-				vct->str = ft_strcat(vct->str, content);
-				ft_strdel(&content);
-			}
+			ft_memmove(vct->str + 1, vct->str, vct->len);
+			vct->str[0] = c;
+			vct->len++;
 		}
 	}
 	return (ret);
