@@ -38,5 +38,10 @@ int			vct_pushchar(const char c, t_vector *vct);
 int			vct_insertchar(const char c, const size_t pos, t_vector *vct);
 int			vct_insertstr(const char *str, const size_t pos, t_vector *vct);
 void		vct_del(t_vector *vct);
+void		vct_dellastchar(t_vector *vct);
+void		vct_delfirstchar(t_vector *vct);
+void		vct_delchar(t_vector *vct, size_t pos);
+void		vct_delnchar(t_vector *vct, size_t pos, size_t n);
+int			vct_replace(t_vector *vct, char *occurence, char *replace);
 
 #endif

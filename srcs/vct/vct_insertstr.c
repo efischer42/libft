@@ -2,8 +2,6 @@
 
 static int	insert(const char *str, const size_t pos, t_vector *vct)
 {
-	char	*first_part;
-	char	*last_part;
 	size_t	len;
 	int		ret;
 
@@ -14,19 +12,8 @@ static int	insert(const char *str, const size_t pos, t_vector *vct)
 		ret = vct_resize(vct);
 	if (ret == SUCCESS)
 	{
-		first_part = ft_strndup(vct->str, pos);
-		last_part = ft_strdup(vct->str + pos);
-		if (first_part == NULL || last_part == NULL)
-			ret = FAILURE;
-		else
-		{
-			vct_clear(vct);
-			vct->str = ft_strcpy(vct->str, first_part);
-			vct->str = ft_strcat(vct->str, str);
-			vct->str = ft_strcat(vct->str, last_part);
-			ft_strdel(&first_part);
-			ft_strdel(&last_part);
-		}
+		ft_memmove(vct->str + pos + len, vct->str + pos, vct->len - len);
+		ft_memcpy(vct->str + pos, str, len);
 	}
 	return (ret);
 }

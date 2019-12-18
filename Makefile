@@ -255,12 +255,19 @@ SRCS += vct_newstr.c
 SRCS += vct_new.c
 SRCS += vct_resize.c
 SRCS += vct_addstr.c
+SRCS += vct_pushstr.c
 SRCS += vct_clear.c
 SRCS += vct_reset.c
-SRCS += vct_pushstr.c
 SRCS += vct_addchar.c
 SRCS += vct_pushchar.c
+SRCS += vct_insertchar.c
+SRCS += vct_insertstr.c
 SRCS += vct_del.c
+SRCS += vct_dellastchar.c
+SRCS += vct_delfirstchar.c
+SRCS += vct_delchar.c
+SRCS += vct_delnchar.c
+SRCS += vct_replace.c
 
 #==============================================================================#
 #==================================== OBJS ====================================#
