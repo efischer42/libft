@@ -65,7 +65,6 @@ int			get_next_line(const int fd, char **line)
 	static char	*rest;
 	ssize_t		ret;
 
-	ret = 0;
 	if (fd == -42)
 	{
 		ft_strdel(line);

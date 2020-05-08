@@ -70,7 +70,7 @@ PATHI += $(INCLUDES)
 #=================================== COMPILE ==================================#
 #==============================================================================#
 
-CC = gcc
+CC = clang
 CFLAGS += -Wall
 CFLAGS += -Wextra
 CFLAGS += -Werror
@@ -194,6 +194,7 @@ SRCS += ft_lstlen.c
 SRCS += ft_dblstlen.c
 SRCS += ft_lstmap.c
 SRCS += ft_lstnew.c
+SRCS += ft_lstnewnomalloc.c
 SRCS += ft_dblstnew.c
 SRCS += ft_lstnew_str.c
 SRCS += ft_lstprint.c

@@ -34,7 +34,6 @@ int			vct_pushstr(const char *str, t_vector *vct)
 {
 	int		ret;
 
-	ret = SUCCESS;
 	if (vct == NULL)
 		ret = FAILURE;
 	else

@@ -20,7 +20,6 @@ int			vct_insertchar(const char c, const size_t pos, t_vector *vct)
 {
 	int		ret;
 
-	ret = SUCCESS;
 	if (vct == NULL)
 		ret = FAILURE;
 	else

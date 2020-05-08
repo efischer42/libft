@@ -22,7 +22,6 @@ int			vct_insertstr(const char *str, const size_t pos, t_vector *vct)
 {
 	int		ret;
 
-	ret = SUCCESS;
 	if (vct == NULL)
 		ret = FAILURE;
 	else
