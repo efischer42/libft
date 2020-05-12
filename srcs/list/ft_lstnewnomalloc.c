@@ -26,12 +26,6 @@ t_list	*ft_lstnewnomalloc(void *content, size_t content_size)
 	}
 	else
 	{
-		lst->content = malloc(content_size);
-		if (lst->content == NULL)
-		{
-			free(lst);
-			return (NULL);
-		}
 		lst->content = content;
 		lst->content_size = content_size;
 	}

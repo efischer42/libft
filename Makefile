@@ -76,7 +76,7 @@ CFLAGS += -Wextra
 CFLAGS += -Werror
 #CFLAGS += -pedantic
 #CFLAGS += -Wpadded
-CFLAGS += -fsanitize=address,undefined -g3
+#CFLAGS += -fsanitize=address,undefined -g3
 COMPILE += $(CC) -c
 
 #==============================================================================#
