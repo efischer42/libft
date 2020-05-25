@@ -76,7 +76,7 @@ CFLAGS += -Wextra
 CFLAGS += -Werror
 #CFLAGS += -pedantic
 #CFLAGS += -Wpadded
-#CFLAGS += -fsanitize=address,undefined -g3
+CFLAGS += -fsanitize=address,undefined -g3
 COMPILE += $(CC) -c
 
 #==============================================================================#
@@ -189,6 +189,7 @@ SRCS += ft_lstdel.c
 SRCS += ft_dblstdel.c
 SRCS += ft_lstdelone.c
 SRCS += ft_dblstdelone.c
+SRCS += ft_lstdelto.c
 SRCS += ft_lstiter.c
 SRCS += ft_lstlen.c
 SRCS += ft_dblstlen.c
