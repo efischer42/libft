@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 14:51:17 by efischer          #+#    #+#             */
-/*   Updated: 2019/06/18 14:51:29 by efischer         ###   ########.fr       */
+/*   Updated: 2020/05/26 15:08:57 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,31 +84,40 @@ static int		ft_read(t_file *file, char **line)
 	return (ret);
 }
 
+static int		get_line(t_list *tmp, char **line)
+{
+	int				ret;
+
+	if ((ft_rest(((t_file*)(tmp->content)), line)) == 1
+		|| (ret = ft_read(((t_file*)(tmp->content)), line)) == 1)
+	{
+		return (1);
+	}
+	if (((t_file*)(tmp->content))->cur && *(((t_file*)(tmp->content))->cur))
+	{
+		*line = ft_strdup(((t_file*)(tmp->content))->cur);
+		ft_strdel(&((t_file*)(tmp->content))->cur);
+		return (1);
+	}
+	return (ret);
+}
+
 int				get_next_line_fd(const int fd, char **line)
 {
 	static t_list	*list;
 	t_list			*tmp;
-	int				ret;
 
 	if (fd < 0 || !line)
 		return (-1);
-	if (!list)
+	if (list == NULL)
 		list = ft_init_list(fd);
 	tmp = list;
-	while (tmp && T_FILEL->fd != fd)
+	while (tmp && ((t_file*)(tmp->content))->fd != fd)
 	{
-		if (!tmp->next)
+		if (tmp->next == NULL)
 			tmp->next = ft_init_list(fd);
 		else
 			tmp = tmp->next;
 	}
-	if ((ft_rest(T_FILEL, line)) == 1 || (ret = ft_read(T_FILEL, line)) == 1)
-		return (1);
-	if (T_FILEL->cur && *(T_FILEL->cur))
-	{
-		*line = ft_strdup(T_FILEL->cur);
-		ft_strdel(&T_FILEL->cur);
-		return (1);
-	}
-	return (ret);
+	return (get_line(tmp, line));
 }

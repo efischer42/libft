@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:14:33 by efischer          #+#    #+#             */
-/*   Updated: 2019/09/12 14:25:13 by efischer         ###   ########.fr       */
+/*   Updated: 2020/05/26 14:30:28 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include <stdarg.h>
 # include "libft.h"
-# define FILEL ((t_file *)(list->content))
-# define T_FILEL ((t_file *)(tmp->content))
 # define PM1 "5"
 # define PM2 "25"
 # define PM3 "125"

@@ -6,7 +6,7 @@
 /*   By: efischer <efischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 15:32:07 by efischer          #+#    #+#             */
-/*   Updated: 2019/10/26 13:52:09 by efischer         ###   ########.fr       */
+/*   Updated: 2020/05/26 14:30:44 by efischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,5 @@
 # define FALSE		0
 # define SUCCESS	0
 # define FAILURE	-1
-# define FILEL ((t_file *)(list->content))
-# define T_FILEL ((t_file *)(tmp->content))
 
 #endif
